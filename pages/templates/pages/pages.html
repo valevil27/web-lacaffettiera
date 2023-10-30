@@ -11,7 +11,7 @@
                             <span class="section-heading-lower font-weight-bold">{{ page.title|title }} de <em>La Caffettiera</em></span>
                         </h2>
                         <div class="section-content">
-                            <p>{{ page.content|linebreaks }}</p>
+                            <p>{{ page.content|safe }}</p>
                         </div>
                         {% if user.is_authenticated %}
                             <p><a class="link" href="{% url 'admin:pages_page_change' page.id %}">Editar</a></p>
