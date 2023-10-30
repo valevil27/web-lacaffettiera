@@ -101,7 +101,7 @@
                 {% get_page_list as page_list %}
                 <!-- TODO: create the links -->
                 {% for page in page_list %}
-                <a href="{% url 'pages' page.id %}" class="link">{{ page.title|title }}</a>
+                <a href="{% url 'page' page.id page.title|slugify %}" class="link">{{ page.title|title }}</a>
                 {% if not forloop.last %} · {% endif %}
                 {% endfor %}
             </p>

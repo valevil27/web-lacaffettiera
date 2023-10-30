@@ -1,0 +1,30 @@
+section {
+    overflow: hidden;
+}
+
+.custom-relative {
+    position: relative;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(34, 34, 34, .9);
+    padding: 1rem 0 0.5rem;
+    position: absolute;
+    left: -680px;
+    top: 40px;
+    width: 1500px;
+    z-index: 1;
+    transform: rotateZ(-45deg);
+
+    .category-title {
+        color: rgba(255, 255, 255, 0.85);
+        font-weight: 600;
+    }
+}
+
+div:has(.category) {
+    overflow: hidden !important;
+}
