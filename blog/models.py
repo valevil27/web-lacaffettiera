@@ -17,7 +17,6 @@ class Category(models.Model):
 
 class Post(models.Model):
     title= models.CharField("Título", max_length=100)
-
     content= models.TextField("Contenido")
     published= models.DateTimeField("Fecha de Publicación", default = timezone.now)
     image= models.ImageField("Imagen", upload_to="blog", null=True, blank=True)
@@ -28,8 +27,8 @@ class Post(models.Model):
     updated = models.DateTimeField("Última Actualización", auto_now=True)
     
     class Meta:
-        verbose_name = "categoría"
-        verbose_name_plural = "categorías"
+        verbose_name = "post"
+        verbose_name_plural = "posts"
         ordering = ["-published"]
         
     def __str__(self) -> str:
