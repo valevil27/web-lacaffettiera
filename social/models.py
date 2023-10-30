@@ -12,3 +12,6 @@ class Link(models.Model):
     class Meta:
         verbose_name="link"
         ordering = ("name",)
+        
+    def __str__(self) -> str:
+        return self.key
