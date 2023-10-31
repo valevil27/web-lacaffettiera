@@ -10,8 +10,8 @@ def contact(request):
         contact_form = ContactForm(data=request.POST)
         if contact_form.is_valid():
             name = request.POST.get("name", "")
-            email = request.POST.get("name", "")
-            content = request.POST.get("name", "")
+            email = request.POST.get("email", "")
+            content = request.POST.get("content", "")
             # If everything goes well, redirect
             return redirect(reverse("contact") + "?ok")
     return render(request, "contact/contact.html", {"form": form})
