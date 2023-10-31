@@ -10,6 +10,9 @@
                 <div class="col-xl-9 col-lg-10 mx-auto">
                     <div class="bg-faded rounded p-5">
                         <h2 class="section-heading mb-4">
+                            {% if 'ok' in request.GET %}
+                            <span class="section-heading-upper" style="color: #62c06b;">Su mensaje fue enviado correctamente. En breve contactaremos con usted en caso de ser necesario.</span>
+                            {% endif %}
                             <span class="section-heading-upper">Envíanos tus dudas</span>
                             <span class="section-heading-lower">Contacto</span>
                         </h2>
@@ -42,8 +45,13 @@
                             </div>
                         </form>
                         Fin formulario de contacto -->
-
-                        {{ form }}
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            <table>
+                                {{ form.as_table }}
+                            </table>
+                            <button type="submit">Enviar</button>
+                        </form>
                     </div>
                 </div>
             </div>
