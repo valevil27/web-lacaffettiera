@@ -148,3 +148,9 @@ CKEDITOR_CONFIGS = {
         'height': 500
     }
 }
+
+# Email Settings
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = 'e4a3b2d44633fb'
+EMAIL_HOST_PASSWORD = '5248d966fceebe'
+EMAIL_PORT = '2525'
