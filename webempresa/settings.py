@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ckeditor',
     'blog.apps.BlogConfig',
+    'contact.apps.ContactConfig',
     'core',
     'social.apps.SocialConfig',
     'services.apps.ServicesConfig',
